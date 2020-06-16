@@ -12,6 +12,8 @@ e. Trolling will not be tolerated.
 
 This clearly is not the rules for the old RSP forum. The moderator team will be working to be, well, be moderate in their moderation, but a lot of the old behavior created toxicity and will no longer be acceptable.
 
+[b]If you can't [i]not[/i] hassle someone[/b] when you see one of their posts, then try using your [thread=1439972]block list[/thread].  Note that RSP's rules for your block list are the same as BGG's: the first rule of your block list is [i]you don't talk about your block list.[/i]
+
 [b][size=18]What the Moderator team will be doing:[/size][/b]
 
 We'll be moderating the RSP guild as consistently and effectively as we can. Which means:
@@ -27,3 +29,5 @@ d. Moderators will [i]always[/i] hide posts in threads that they have participat
 e. The decisions of the moderating team are final. You may complain to the moderator account [user=RSP_Guild_Manager][/user] regarding a moderation action, but once the moderator team has jointly made a decision, that decision will not be changed.
 
 [b]We expect to make some mistakes at first,[/b] which is why the default action will be hiding rather than deleting a post - we can undo that if necessary. And as we all move forward, we expect that these rules will evolve.
+
+[size=7][i]If you want to see a log of changes to this post, see https://github.com/kuhrusty/rsp[/i][/size]
