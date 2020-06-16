@@ -1,0 +1,29 @@
+The shift to the new RSP guild has happened, and we now owe it to BGG to meet their expectations as a self-moderating version of RSP. The following are the rules for posting and how moderators will be taking action.
+
+[size=18][b]For RSP Guild Members:[/b][/size]
+
+Users will follow [geekurl=/community_rules]the BGG community rules[/geekurl] for all posts with the explicit exception that RSP topics are permitted. At the highest level, this means:
+
+a. Use common courtesy
+b. Respect others (even when they don't deserve it)
+c. No hate speech, racism, sexism, or homophobia permitted.
+d. Personal attacks will not be tolerated - make your posts about the content, not the person.
+e. Trolling will not be tolerated.
+
+This clearly is not the rules for the old RSP forum. The moderator team will be working to be, well, be moderate in their moderation, but a lot of the old behavior created toxicity and will no longer be acceptable.
+
+[b][size=18]What the Moderator team will be doing:[/size][/b]
+
+We'll be moderating the RSP guild as consistently and effectively as we can. Which means:
+
+a. Moderators will log all moderating actions to include the poster, a link to the post that was moderated and the reason for the action. This is being handled with dedicated Discord channels accessible to the moderators.
+
+b. Moderators will initially be hiding posts without deleting them for the time being. Moderators may, at their discretion, ask users to edit a post rather taking other action to make it acceptable under the site rules.
+
+c. A second moderator will review the moderating action and validate it. If they disagree, the third moderator will break any ties. Posts will remain hidden, be deleted, or made visible again based on this determination.
+
+d. Moderators will [i]always[/i] hide posts in threads that they have participated in rather than deleting them and refer those posts to another moderator for action ASAP.
+
+e. The decisions of the moderating team are final. You may complain to the moderator account [user=RSP_Guild_Manager][/user] regarding a moderation action, but once the moderator team has jointly made a decision, that decision will not be changed.
+
+[b]We expect to make some mistakes at first,[/b] which is why the default action will be hiding rather than deleting a post - we can undo that if necessary. And as we all move forward, we expect that these rules will evolve.
