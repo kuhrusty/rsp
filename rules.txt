@@ -30,4 +30,14 @@ e. The decisions of the moderating team are final. You may complain to the moder
 
 [b]We expect to make some mistakes at first,[/b] which is why the default action will be hiding rather than deleting a post - we can undo that if necessary. And as we all move forward, we expect that these rules will evolve.
 
+[size=18][b]How to get banned from RSP[/b][/size]
+
+You can get banned from RSP--[i]and possibly BGG[/i]--for any of the following:
+
+1.  Any single instance of overt hate speech of any kind.
+2.  Extreme personal attacks.
+3.  Repeated violations of the rules, creating a toxic environment for discussion.  This includes trolling, "dump & run" posting, and repeated attacks on other users.
+
+Moderators will warn users of hidden/deleted posts that violate the rules and will work with BGG site administrators to determine when additional names should be added to the list of banned users.  [b]Please don't make us do this.[/b]
+
 [size=7][i]If you want to see a log of changes to this post, see https://github.com/kuhrusty/rsp[/i][/size]
