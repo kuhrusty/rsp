@@ -85,3 +85,5 @@ have something like `xxdiff` installed, you can check the output:
     $ unzip ~/Downloads/RSPThreads.zip '2009/*'
     $ ./stomp.perl 2009/*
     $ xxdiff 2009.orig 2009
+
+Some years, it doesn't stomp anything, so, uhh, that's good.
