@@ -49,7 +49,7 @@ Extract a year's worth of posts from the archive:
     $ unzip ~/Downloads/RSPThreads.zip '2009/*'
 
 Run the script which stomps some HTML entities which XML::LibXML was croaking
-on.
+on (see below for more on this).
 
     $ ./stomp.perl 2009/*
 
@@ -67,3 +67,21 @@ this:
 Optionally, clean up the unpacked files:
 
     $ rm -rf 2009
+
+### About that stomp.perl ###
+
+I don't know why XML::LibXML is failing to parse XML files containing HTML
+with entities like `&ouml;` and `&ndash;`, but it is.  (I tried setting its
+`expand_entities` option to 0, but that didn't make a difference.)  So, the
+horrible [stomp.perl](stomp.perl) edits-in-place those files, replacing those
+entities with, uhh, lesser substitutes.
+**This is horribly wrong and I am shamed.**
+
+If you're suspicious about what it's doing *(as you should be!),* and you
+have something like `xxdiff` installed, you can check the output:
+
+    $ unzip ~/Downloads/RSPThreads.zip '2009/*'
+    $ mv 2009 2009.orig
+    $ unzip ~/Downloads/RSPThreads.zip '2009/*'
+    $ ./stomp.perl 2009/*
+    $ xxdiff 2009.orig 2009
