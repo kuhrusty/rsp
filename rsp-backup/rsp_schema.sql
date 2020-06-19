@@ -1,14 +1,15 @@
 --  Tables for storing some information about RSP posts.  None of this is
 --  interesting.
 --
+--  IF YOU'RE USING SQLITE, this file is used by sqlite-create.perl to create
+--  the tables; ignore the MySQL-specific jibber-jabber in the next paragraph.
+--
 --  Note also that these are MyISAM instead of InnoDB because we probably
 --  don't actually care about referential integrity (we're slapping the data
 --  in once & from then on, just querying it), and we DO love the speed of
 --  MyISAM.  We love it a LOT: starting from empty tables, InnoDB took ~29s
 --  to insert 28 threads/459 posts/78 users (without post bodies); to do the
 --  same thing, MyISAM took WELL UNDER HALF A SECOND.
---
---  hibikir suggested using SQLite; that looks cool, and I wish I had tried it.
 
 CREATE TABLE user (
   userid int NOT NULL AUTO_INCREMENT,
