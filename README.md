@@ -15,3 +15,5 @@ changes.
 ## Other RSP Stuff
 
 * [Meat's RSP archive](https://www.boardgamegeek.com/thread/2443018)
+* [Some scripts](rsp-backup/README.md) for stuffing Meat's RSP archive into a
+  database
