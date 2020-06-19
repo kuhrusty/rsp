@@ -4,13 +4,28 @@ package rspdb;
 use strict;
 use DBI;
 
+#  To use SQLite, set this to 1 and make sure you like the filename.
+my $sqlite = 0;
+my $sqliteFile = 'rspdb.sqlite';
+my $IGNORE = 'IGNORE';
 my %userNameToID = ();
 
 #  Call disconnect() on this guy when you're done
 sub getDBHandle() {
-    my $dbh = DBI->connect("DBI:mysql:rsp", "rsp-user", "rsp");
+    my $dbh = $sqlite ?
+        DBI->connect("DBI:SQLite:dbname=$sqliteFile", "", "") :
+        DBI->connect("DBI:mysql:rsp", "rsp-user", "rsp");
     $dbh || die("couldn't connect: " . DBI->errstr());
+    if ($sqlite) {
+        $IGNORE = 'OR IGNORE';
+        $dbh->do('PRAGMA synchronous = OFF');
+    }
     return $dbh;
+}
+
+#  Returns true if we think we're using SQLite, false if not.
+sub isSQLite() {
+    $sqlite;  #  yeah, well, you paid $0 for this code, right?
 }
 
 #  Returns an int ID for the user, adding it to the database if necessary.
@@ -59,7 +74,7 @@ sub addThread() {
     #  well, we "know" we only have room for 80 chars in the column
     (defined $subject) && ($subject = substr($subject, 0, 80));
 
-    my $sth = $dbh->prepare("INSERT IGNORE INTO thread (threadid, userid, subject) VALUES (?, ?, ?)");
+    my $sth = $dbh->prepare("INSERT $IGNORE INTO thread (threadid, userid, subject) VALUES (?, ?, ?)");
     $sth->execute($threadid, $userid, $subject) || die("couldn't add thread: " . DBI->errstr());
 }
 
@@ -73,10 +88,10 @@ sub addPost() {
     my ($dbh, $threadid, $postid, $userid, $body) = @_;
 
     if (defined $body) {
-        my $sth = $dbh->prepare("INSERT IGNORE INTO post (postid, threadid, userid, body) VALUES (?, ?, ?, ?)");
+        my $sth = $dbh->prepare("INSERT $IGNORE INTO post (postid, threadid, userid, body) VALUES (?, ?, ?, ?)");
         $sth->execute($postid, $threadid, $userid, $body) || die("couldn't add post with body: " . DBI->errstr());
     } else {
-        my $sth = $dbh->prepare("INSERT IGNORE INTO post (postid, threadid, userid) VALUES (?, ?, ?)");
+        my $sth = $dbh->prepare("INSERT $IGNORE INTO post (postid, threadid, userid) VALUES (?, ?, ?)");
         $sth->execute($postid, $threadid, $userid) || die("couldn't add post: " . DBI->errstr());
     }
 }
