@@ -87,3 +87,16 @@ have something like `xxdiff` installed, you can check the output:
     $ xxdiff 2009.orig 2009
 
 Some years, it doesn't stomp anything, so, uhh, that's good.
+
+### More non-ASCII stupidity ###
+
+There are two users in the archive whose names contain non-ASCII characters,
+and they're handled in quite possibly the dumbest and wrongest way possible:
+I *replace* the non-ASCII characters with XXX.  So, uhh, if you see a few
+messages like `STOMPING NON-ASCII "..."`, and users named `Sr. UlXXXXXX` and
+`Punainen NXXXXXXrtti`, that's why.
+
+It is *wrong,* but at least I didn't waste much time trying to get it *right.*
+
+Note that these poor folks' names were also mangled *differently* by
+`stomp.perl` where they were quoted in other users' posts.
