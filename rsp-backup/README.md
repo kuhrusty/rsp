@@ -6,6 +6,27 @@ Things to note about the archive:
 * The files are organized by year *of last modification,* not the year they were originally posted
 * The body of each post is the HTML of the post, not the BGG BBCode-style markup
 
+### Using SQLite instead of MySQL ###
+
+**Terwox!  If you want to store post bodies, uncomment the `body` column** in
+[rsp_schema.sql](rsp_schema.sql).
+
+I haven't fiddled with this much, but I *have* confirmed that you can load
+post data (including bodies) into a SQLite database.  To do this:
+
+1. Set `$sqlite` to 1 in `rspdb.pm`, and confirm that you like the value of
+`$sqliteFile` right below it.  (That file will be created by SQLite.)
+
+2. Run the script which turns the MySQL `rsp_schema.sql` into SQLite syntax
+and creates the tables:
+
+    $ ./sqlite-create.perl
+
+3. **Ignore** the entire "Setting up a MySQL database" section below;
+`snort.perl` will happily use SQLite instead.
+
+That should be it!
+
 ### Setting up a MySQL database ###
 
 **Terwox!  If you want to store post bodies, uncomment the `body` column** in
