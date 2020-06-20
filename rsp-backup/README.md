@@ -89,6 +89,87 @@ Optionally, clean up the unpacked files:
 
     $ rm -rf 2009
 
+### Getting data back out ###
+
+Of course you can run SQL queries against the data directly, but there's also
+`by-user.perl`, a script I was using to get counts & lists of posts & threads.
+
+Normally it takes a list of users on the command line:
+
+    $ ./by-user.perl -c kuhrusty 'Norbert Chan' Meat Meat Meat
+    Meat           1266
+    Norbert Chan   4
+    kuhrusty       3607
+    Total:         4877
+
+That's saying Meat has 1266 posts in the archive, Norbert Chan has 4, and
+kuhrusty has 3607.
+
+How about threads:
+
+    $ ./by-user.perl -tc kuhrusty 'Norbert Chan' Meat Meat Meat
+    Meat           8
+    Norbert Chan   0
+    kuhrusty       25
+    Total:         33
+
+Meat has started 8 threads, Norbert Chan has started 0, and kuhrusty has
+started 25.  **Note** that this considers the first poster in the thread to
+have started it, even though this is **incorrect** when the first post(s) in
+the thread has been deleted.
+
+We can see a list of thread IDs:
+
+    $ ./by-user.perl -t Meat
+    Meat    8
+      839465
+      1917257
+      1918062
+      2208604
+      2393813
+      2394532
+      2441781
+      2443018
+    Total:  8
+
+Or we can see that as a list formatted for BGG links:
+
+    $ ./by-user.perl -t --bgg Meat
+    [b]Meat r{8}r[/b]
+
+    [thread=839465][/thread]
+    [thread=1917257][/thread]
+    [thread=1918062][/thread]
+    [thread=2208604][/thread]
+    [thread=2393813][/thread]
+    [thread=2394532][/thread]
+    [thread=2441781][/thread]
+    [thread=2443018][/thread]
+
+    [b]Total: r{8}r[/b]
+
+Same goes for posts:
+
+    $ ./by-user.perl --bgg 'Norbert Chan'
+    [b]Norbert Chan r{4}r[/b]
+
+    [article=3587365][/article]
+    [article=3836371][/article]
+    [article=10653614][/article]
+    [article=19202225][/article]
+
+    [b]Total: r{4}r[/b]
+
+If no user names are given on the command line, they're read from stdin:
+
+    $ ./by-user.perl -c < banned-claimed
+    CapAp               3079
+    DWTripp             12233
+    DaviddesJ           20638
+    Edward Sexby        306
+    LightRider          6720
+    ...
+
 ### About that stomp.perl ###
 
 I don't know why XML::LibXML is failing to parse XML files containing HTML
