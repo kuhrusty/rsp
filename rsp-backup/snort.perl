@@ -31,10 +31,6 @@ Verbose: prints more information about what it's doing.
 
 Silent: prints less.
 
-=item B<--help>, B<-h>, B<-?>
-
-Display usage information.
-
 =item B<--man>
 
 Display complete manual page.
@@ -67,7 +63,6 @@ use rspdb;
 
 #  if true, we'll write the HTML of each post to the post table
 my $withBody = 0;
-my $needHelp = 0;
 my $needManPage = 0;
 my $verbose = 0;
 my $silent = 0;
@@ -76,12 +71,9 @@ Getopt::Long::Configure ("bundling");
 GetOptions('body!' => \$withBody,
            's!' => \$silent,
            'v!' => \$verbose,
-           'man!' => \$needManPage,
-           'help|h|?!' => \$needHelp) || pod2usage(2);
+           'man!' => \$needManPage) || pod2usage(1);
 if ($needManPage) {
     pod2usage('-verbose' => 2); 
-} elsif ($needHelp) {
-    pod2usage(1);
 } elsif ($verbose && $silent) {
     pod2usage("I can't be silent AND verbose!");
 }
