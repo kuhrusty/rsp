@@ -95,13 +95,15 @@ $dbh->disconnect();
 
 sub formatCounts() {
     my ($hash) = @_;
+    my $padding = &longest(values %uidToUsername) + 3;
     my $total = 0;
     foreach my $uid (sort { $uidToUsername{$a} cmp $uidToUsername{$b} } keys %uidToUsername) {
         my $count = (defined $hash->{$uid}) ? $hash->{$uid} : 0;
-        print "", $uidToUsername{$uid}, "\t$count\n";
+        my $tn = $uidToUsername{$uid};
+        print $tn, (" " x ($padding - (length $tn))), "$count\n";
         $total += $count;
     }
-    print "Total:\t$total\n";
+    print "Total:", (" " x ($padding - (length "Total:"))), "$total\n";
 }
 
 sub formatLists() {
@@ -129,4 +131,11 @@ sub formatLists() {
     } else {
         print "Total:\t$total\n";
     }
+}
+
+#  returns the length of the longest argument, or 0
+sub longest() {
+    my $max = 0;
+    map { ($max < length) && ($max = length) } @_;
+    return $max;
 }
