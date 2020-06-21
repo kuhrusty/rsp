@@ -14,6 +14,16 @@ This clearly is not the rules for the old RSP forum. The moderator team will be 
 
 [b]If you can't [i]not[/i] hassle someone[/b] when you see one of their posts, then try using your [thread=1439972]block list[/thread].  Note that RSP's rules for your block list are the same as BGG's: the first rule of your block list is [i]you don't talk about your block list.[/i]
 
+[b][size=18]If you see problematic content:[/size][/b]
+
+RSP [i]has[/i] to be self-moderating.  If you see a post which breaks the rules, [b]do not reply to it;[/b] that just means we have to remove the offending post [i]and[/i] yours.  Instead:
+
+[b]1. Flag it.[/b]  This is not strictly necessary (as it doesn't notify the moderation team), but it does make the post stand out a bit when we're viewing the thread while logged in as the RSP_Guild_Manager account.
+
+[b]2. GeekMail the RSP_Guild_Manager account[/b] and include a link to the post.  Keep in mind that, statistically, one of your moderators [i]is[/i] a late-middle-aged cis-het white guy who spanks it nightly to dolphin porn; you're going to need to [i]be specific[/i] about what the problem is, [i]and why,[/i] or else this guy might not get it.
+
+[b]3. Say something about it in [url=https://discord.com/channels/719206139639889933/720757378320039937]Discord[/url][/b] in the report-posts-here channel.  Like step 1, this is optional, but may cause your message to be noticed by moderators sooner.
+
 [b][size=18]What the Moderator team will be doing:[/size][/b]
 
 We'll be moderating the RSP guild as consistently and effectively as we can. Which means:
