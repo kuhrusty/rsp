@@ -20,7 +20,11 @@ RSP [i]has[/i] to be self-moderating.  If you see a post which breaks the rules,
 
 [b]1. Flag it.[/b]  This is not strictly necessary (as it doesn't notify the moderation team), but it does make the post stand out a bit when we're viewing the thread while logged in as the RSP_Guild_Manager account.
 
-[b]2. GeekMail the RSP_Guild_Manager account[/b] and include a link to the post.  Keep in mind that, statistically, one of your moderators [i]is[/i] a late-middle-aged cis-het white guy who spanks it nightly to dolphin porn; you're going to need to [i]be specific[/i] about what the problem is, [i]and why,[/i] or else this guy might not get it.
+[b]2. GeekMail the RSP_Guild_Manager account[/b] r{and include a link to the post.}r  Keep in mind that, statistically, one of your moderators [i]is[/i] a late-middle-aged cis-het white guy who spanks it nightly to dolphin porn; you're going to need to [i]be specific[/i] about what the problem is, [i]and why,[/i] or else this guy might not get it.
+
+[size=9][i][b]To find the URL of a specific post:[/b] it's now hidden in the post's date/time ("2 hours ago" or whatever) which is now in the top line of the post, beside the poster's name.  Depending on your device/browser, right-clicking or long-pressing on that date should treat it as a link, and pop up a menu which lets you copy the link's location or address.[/i][/size]
+
+[size=9][i][b]Remember that RSP_Guild_Manager is a shared account;[/b] any mail you send it may be read by anyone who is a moderator now or in the future, possibly including the person whose rule violation you're reporting.[/i][/size]
 
 [b]3. Say something about it in [url=https://discord.com/channels/719206139639889933/720757378320039937]Discord[/url][/b] in the report-posts-here channel.  Like step 1, this is optional, but may cause your message to be noticed by moderators sooner.
 
