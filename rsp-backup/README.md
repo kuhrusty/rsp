@@ -65,6 +65,22 @@ Confirm that there are tables:
 
 ### Adding post data to the database ###
 
+There's a script, `unzip-year.perl`, which will extract a year's worth of
+posts from the .zip file, stuff them into the database, and clean up the
+unzipped files.  **Note that this does not** run `snort.perl` with the
+`--body` flag; see below.
+
+List the available years:
+
+    $ ./unzip-year.perl -f ~/Downloads/RSPThreads.zip -l
+
+Stuff a year's worth of posts into the database:
+
+    $ ./unzip-year.perl -f ~/Downloads/RSPThreads.zip 2007
+
+**Or,** if you want to do that by hand, here are the steps I was doing before
+adding that script.
+
 Extract a year's worth of posts from the archive:
 
     $ unzip ~/Downloads/RSPThreads.zip '2009/*'
